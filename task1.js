@@ -16,17 +16,24 @@ app.get('/api', (req, res) => {
   const currentUTC = new Date();
   currentUTC.setMinutes(currentUTC.getMinutes() + Math.floor(Math.random() * 5) - 2); // Adding or subtracting up to 2 minutes
 
+  // Format the seconds to have exactly two digits
+  const secondsWithTwoDigits = currentUTC.getSeconds().toString().padStart(2, '0');
+
+
   // Construct the JSON response
   const jsonResponse = {
     slack_name: slackName,
     current_day: currentDay,
-    utc_time: currentUTC.toISOString(),
+    utc_time: `${currentUTC.toISOString().slice(0, -5)}Z`, // ${secondsWithTwoDigits}
     track: track,
     github_file_url: 'https://github.com/idowuseyi/hng-1/blob/master/task1.js',
     github_repo_url: 'https://github.com/idowuseyi/hng-1',
     status_code: 200,
   };
 
+
+  console.log(currentUTC.toISOString().slice(0, -5));
+  console.log(secondsWithTwoDigits);
   // Return the JSON response
   res.json(jsonResponse);
 });
