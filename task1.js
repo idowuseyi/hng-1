@@ -32,8 +32,8 @@ app.get('/api', (req, res) => {
   };
 
 
-  console.log(currentUTC.toISOString().slice(0, -5));
-  console.log(secondsWithTwoDigits);
+  // console.log(currentUTC.toISOString().slice(0, -5));
+  // console.log(secondsWithTwoDigits);
   // Return the JSON response
   res.json(jsonResponse);
 });
