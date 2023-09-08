@@ -4,9 +4,7 @@
   "description": "HNGx Backend Tasks",
   "main": "task1.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "npm install",
-    "deploy": "npm install && npm start"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
