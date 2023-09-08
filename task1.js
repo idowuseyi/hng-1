@@ -22,8 +22,8 @@ app.get('/api', (req, res) => {
     current_day: currentDay,
     utc_time: currentUTC.toISOString(),
     track: track,
-    github_file_url: 'https://github.com/username/repo/blob/main/file_name.ext',
-    github_repo_url: 'https://github.com/username/repo',
+    github_file_url: 'https://github.com/idowuseyi/hng-1/blob/master/task1.js',
+    github_repo_url: 'https://github.com/idowuseyi/hng-1',
     status_code: 200,
   };
 
